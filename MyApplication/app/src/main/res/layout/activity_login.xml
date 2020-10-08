@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1A1A1A"
+    tools:context=".LoginActivity">
+
+
+        <LinearLayout
+            android:id="@+id/first"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal"
+            android:layout_above="@id/container2">
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="5dp"
+                android:background="#1A1A1A"
+
+                android:paddingRight="10dp"
+
+                android:src="@drawable/ic_whatson" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/archivo_narrow"
+                android:text="What's"
+                android:background="#1A1A1A"
+                android:textColor="#8FCEFB"
+                android:textSize="45sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/archivo_narrow"
+                android:text="On"
+                android:background="#1A1A1A"
+
+                android:layout_marginRight="5dp"
+                android:textColor="#2068AE"
+                android:textSize="45sp" />
+
+        </LinearLayout>
+    <LinearLayout
+        android:id="@+id/container2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="#A9A9A9"
+        android:orientation="vertical"
+        android:textAlignment="center"
+        tools:ignore="MissingConstraints">
+        <TextView
+            android:id="@+id/Device"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed-light"
+            android:layout_marginTop="10dp"
+            android:textAlignment="center"
+            android:text="Search Device's State"
+            android:textStyle="bold"
+            android:layout_above="@id/username"
+            android:layout_gravity="center"
+            android:paddingTop="15dp"
+            android:textColor="#000000"
+            android:textSize="25dp" />
+<!--        <Spinner-->
+<!--            android:id="@+id/spinner_resolution"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:nestedScrollingEnabled="true"-->
+<!--            android:layout_marginStart="24dp"-->
+<!--            android:layout_marginTop="26dp"-->
+<!--            android:layout_marginEnd="24dp"-->
+<!--            android:background="#ffffff"-->
+<!--            android:hint="i.e. Thermostat"-->
+<!--            android:inputType="textEmailAddress"-->
+<!--            android:selectAllOnFocus="true"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent"  />-->
+        <EditText
+            android:layout_gravity="center"
+            android:id="@+id/username"
+            android:layout_below="@id/Device"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="26dp"
+            android:layout_marginEnd="24dp"
+            android:background="#ffffff"
+            android:hint="i.e. Air-condition"
+            android:inputType="textEmailAddress"
+            android:selectAllOnFocus="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <Button
+            android:id="@+id/login"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/buttonshape"
+            android:gravity="center"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:shadowColor="#000000"
+            android:shadowDx="3"
+            android:shadowDy="2"
+            android:shadowRadius="5"
+            android:text="Search"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="64dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.3"
+        tools:ignore="MissingConstraints" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:background="#A9A9A9"
+        app:itemIconTint="#000000"
+        app:itemTextColor="#000000"
+        app:menu="@menu/bottom_nav_menu" />
+
+</RelativeLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<settings>
+    <host
+        name="snf-871081.vm.okeanos.grnet.gr"
+        login_uri="http://%s/app/login.php?name=%s"
+        register_uri="http://%s/app/register.php"
+        post_params="name=%s&amp;email=%s&amp;password=%s"/>
+    <mail
+        host="smtp.mailtrap.io"
+        port="25"
+        username="660c2d97b5d394"
+        password="b46b8eeab37e7f"
+        from="HCI Team 3 &lt;team3@test.mail&gt;"
+        subject="Welcome to our app!"
+        body="Dear &lt;b&gt;%s&lt;/b&gt;,&lt;br&gt;&lt;br&gt;
+    		Thanks for registering! Hope you enjoy our app!&lt;br&gt;&lt;br&gt;
+    	Best Regards,&lt;br&gt;
+    		HCI Team N"/>
+</settings>
